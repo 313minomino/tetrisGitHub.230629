@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Abang.otf">
+            <string>Abang-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Tetris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2023-06-28 23.44.13" translatesAutoresizingMaskIntoConstraints="NO" id="QSY-jc-F3g">
+                                <rect key="frame" x="-2" y="-6" width="1184" height="832"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-Ai-5Jy" userLabel="Main Stack">
+                                <rect key="frame" x="30" y="34" width="1120" height="756"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yqD-BD-Ync" userLabel="Info Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="1120" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-tt-Qe1" userLabel="Info Next Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="555" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arj-Ii-VKe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="555" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Abang-Regular" family="Abang" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-HF-hfZ">
+                                                        <rect key="frame" x="0.0" y="20.5" width="555" height="59.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZIq-VH-whe" userLabel="Info Score Stack">
+                                                <rect key="frame" x="565" y="0.0" width="555" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kea-ji-mk5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="555" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Abang-Regular" family="Abang" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-Z8-yfd" userLabel="Current Score View">
+                                                        <rect key="frame" x="0.0" y="20.5" width="555" height="59.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-25-lD1">
+                                                                <rect key="frame" x="270" y="18.5" width="15" height="23"/>
+                                                                <fontDescription key="fontDescription" name="Abang-Regular" family="Abang" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.30222992549668876" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="kG7-25-lD1" firstAttribute="centerY" secondItem="Qez-Z8-yfd" secondAttribute="centerY" id="S6k-vR-ua9"/>
+                                                            <constraint firstItem="kG7-25-lD1" firstAttribute="centerX" secondItem="Qez-Z8-yfd" secondAttribute="centerX" id="xqr-FX-wYp"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="mga-VL-yjf"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-J2-m3L" userLabel="Board View">
+                                        <rect key="frame" x="0.0" y="90" width="1120" height="666"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta9-2r-RhN">
+                                <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Abang-Regular" family="Abang" pointSize="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Game Over">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bSh-FA-s8O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sm-Yl-Bq3">
+                                <rect key="frame" x="855" y="465" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <imageReference key="image" image="rotate.left" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rotateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qZY-Fa-j26"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8P-Y9-Brp">
+                                <rect key="frame" x="720" y="590" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29640935430463577" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-me-b0c">
+                                <rect key="frame" x="855" y="590" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <imageReference key="image" image="arrow.down" catalog="system" symbolScale="large"/>
+                                    <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-1j-tF4">
+                                <rect key="frame" x="990" y="590" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                    <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJA-4S-cJr">
+                                <rect key="frame" x="158" y="465" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <imageReference key="image" image="play" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mjo-Sh-K3o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB2-yA-6LQ">
+                                <rect key="frame" x="158" y="590" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="0.30003104304635764" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vrR-tP-Iwn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ta9-2r-RhN" secondAttribute="trailing" id="2bp-xc-tl9"/>
+                            <constraint firstItem="Ta9-2r-RhN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AeQ-De-Xty"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bgs-Ai-5Jy" secondAttribute="trailing" constant="30" id="U9d-oa-cKX"/>
+                            <constraint firstItem="Bgs-Ai-5Jy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="XUv-xm-QrZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bgs-Ai-5Jy" secondAttribute="bottom" constant="10" id="c0w-nb-3IP"/>
+                            <constraint firstItem="Ta9-2r-RhN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d3B-5P-BPY"/>
+                            <constraint firstAttribute="bottom" secondItem="Ta9-2r-RhN" secondAttribute="bottom" id="hod-vj-gPs"/>
+                            <constraint firstItem="Bgs-Ai-5Jy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rzA-rH-i7x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentScoreLabel" destination="kG7-25-lD1" id="wSp-G8-fe1"/>
+                        <outlet property="downButton" destination="r2y-me-b0c" id="bmS-SS-uAZ"/>
+                        <outlet property="gameOverButton" destination="Ta9-2r-RhN" id="5vR-Jy-QTM"/>
+                        <outlet property="gameView" destination="g6g-J2-m3L" id="WL7-iu-Opj"/>
+                        <outlet property="leftButton" destination="a8P-Y9-Brp" id="d6P-rS-Ejw"/>
+                        <outlet property="nextTetrominoView" destination="Jbm-HF-hfZ" id="aMR-7y-hiC"/>
+                        <outlet property="rightButton" destination="Wfc-1j-tF4" id="Ii9-cb-Hk7"/>
+                        <outlet property="startButton" destination="nJA-4S-cJr" id="ugQ-NA-r8v"/>
+                        <segue destination="xqv-aX-Gzl" kind="presentation" identifier="goToSettings" id="xcZ-sE-OCu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.305084745762713" y="82.682926829268297"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="gHf-2e-dY0">
+            <objects>
+                <viewController title="Settings" id="xqv-aX-Gzl" customClass="SettingsViewController" customModule="Tetris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bK-py-m3P">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="780"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IG3-Vg-3Bd">
+                                <rect key="frame" x="0.0" y="30" width="704" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-sX-ZYM">
+                                        <rect key="frame" x="0.0" y="16" width="352" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Abang-Regular" family="Abang" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-dZ-c9S">
+                                        <rect key="frame" x="352" y="9.5" width="354" height="31"/>
+                                        <color key="onTintColor" red="0.10408321099999999" green="0.19108338599999999" blue="0.26542358700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="audioSwitchValueChanged:" destination="xqv-aX-Gzl" eventType="valueChanged" id="6fu-DW-iTg"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xi4-sX-ZYM" firstAttribute="centerY" secondItem="IG3-Vg-3Bd" secondAttribute="centerY" id="DEd-jU-noS"/>
+                                    <constraint firstAttribute="height" constant="50" id="zHk-lJ-YQS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eA2-aH-QPC"/>
+                        <color key="backgroundColor" red="0.17891070249999999" green="0.37542501090000002" blue="0.46950709819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IG3-Vg-3Bd" firstAttribute="top" secondItem="eA2-aH-QPC" secondAttribute="top" constant="30" id="S5O-AU-fUy"/>
+                            <constraint firstItem="eA2-aH-QPC" firstAttribute="trailing" secondItem="IG3-Vg-3Bd" secondAttribute="trailing" id="ZIZ-9x-F0t"/>
+                            <constraint firstItem="IG3-Vg-3Bd" firstAttribute="leading" secondItem="eA2-aH-QPC" secondAttribute="leading" id="wsj-X0-lFz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioSwitch" destination="PEC-dZ-c9S" id="gAz-lJ-Idj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YP0-IT-wIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.61538461538464" y="82.464454976303315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.down" catalog="system" width="118" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="play" catalog="system" width="117" height="128"/>
+        <image name="rotate.left" catalog="system" width="115" height="128"/>
+        <image name="スクリーンショット 2023-06-28 23.44.13" width="2560" height="1432"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

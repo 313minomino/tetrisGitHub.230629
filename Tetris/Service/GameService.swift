@@ -63,19 +63,7 @@ public class GameService : GameServiceProtocol, TimerServiceDelegate {
         nextTetromino = tetrominoHelper.newRandomTetromino(boardService.tetrominoStartingRow, boardService.tetrominoStartingColumn)
         return boardService.setNewTetrominoInBoard(squares: currentTetromino!.squares, color: currentTetromino?.color)
     }
-    
-    private func checkGameOver() {
-        let topRow = 0 // 一番上の行のインデックス
-        
-        for column in 0..<boardService.board!.columnNumber {
-            if let color = boardService.board!.map[topRow][column] {
-                // 一番上の行に色が設定されている場合、ゲームオーバー処理を行う
-                setGameOver()
-                return
-            }
-        }
-    }
-    
+
     private func getBoardRows() -> Int {
         boardService.board!.rowNumber
     }
